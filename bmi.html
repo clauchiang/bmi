@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BMI計算機</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            text-align: center;
+            margin: 1%;
+            background-image: url(./img/flower-gef4cc0b5b_1920.jpg);
+            background-size: cover;
+            background-position: center;
+        }
+        h1{
+            margin: 1% 0;
+        }
+
+        .main{
+            border: 2px solid lightgrey;
+            width: max-content;
+            margin: 0 auto;
+            padding: 2% 4%;
+            background-color: gainsboro;
+            border-radius: 2%;
+        }
+
+        .form{
+            padding: 2% 0;
+        }
+
+        .button{
+            padding-top: 3%;
+            text-align: right;
+        }
+
+        iframe{
+            border: 2px solid skyblue;
+            width: fit-content;
+            margin: 2%;
+            padding: 1%;
+            background-color: lightblue;
+            border-radius: 2%;
+        }
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <h1>BMI計算</h1>
+
+    <div class="main">
+        <form action="computing.php" method="get" target="bmiMain">
+            <div class="form">
+                <label for="">身高(cm):</label>
+                <input type="number" name="height" id="">
+            </div>
+    
+            <div class="form">
+                <label for="">體重(kg): </label>
+                <input type="number" name="weight" id="">
+            </div>
+            <div class="box button">
+               <input type='submit' value='開始計算'> 
+            </div>
+        </form>
+    </div>
+
+    <iframe src="./computing.php" frameborder="0" name="bmiMain">
+
+    </iframe>
+    
+</body>
+</html>
