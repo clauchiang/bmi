@@ -25,64 +25,89 @@
             background-position: center;
         }
 
+        /* 標題 */
         h1 {
-            margin: 1% 0;
+            margin: 1% 0 20px;
         }
 
+        /* 上方身高體重區 */
         .main {
             width: 350px;
             margin: 0 auto;
-            padding: 2% 0;
+            padding: 1.5% 0;
             background-color: #A3D1D1;
             border-radius: 5px;
         }
 
-        table{
+        /* 輸入區 */
+        table {
             width: 100%;
             padding: 10px;
         }
 
-        td{
+        /* 輸入區文字 */
+        td {
             font-size: 18px;
             padding: 2px 0;
         }
 
+        /* 輸入框 */
         #heightN,
-        #weightN{
+        #weightN {
             width: 90%;
-            padding: 0 3px;
+            padding: 0 5px;
             border: none;
-            height: 20px;
+            height: 25px;
         }
 
-        #heightL,
-        #weightL{
-            height: 20px;
-        }
-
+        /* 按鈕區 */
         .button {
-            margin-top: 5%;
-            
+            margin-top: 7%;
+            display: flex;
+            justify-content: space-around;
+            padding: 0 10px;
         }
 
-        .start{
+        /* 開始計算 */
+        .start {
             font-size: 20px;
             border: none;
             background-color: #3D7878;
             color: whitesmoke;
-            width: 80%;
+            width: 60%;
             height: 35px;
             cursor: pointer;
             border-radius: 10px;
         }
 
+        /* bmi標準 */
+        p {
+            font-size: 20px;
+            background-color: #3D7878;
+            color: whitesmoke;
+            width: calc(100% - 60% - 20px);
+            height: 35px;
+            border-radius: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a{
+            text-decoration: none;
+        }
+
+        a:visited{
+            color: whitesmoke;
+        }
+
+        /* 下方顯示區 */
         iframe {
             width: 350px;
             height: 300px;
             margin: 2%;
             backdrop-filter: brightness(50%);
         }
-
     </style>
 
 </head>
@@ -114,13 +139,15 @@
 
             <div class="button">
                 <input type='submit' value='開始計算' class="start">
+                <p>
+                    <a href="./index.html" target="_top">BMI標準</a> 
+                </p>
             </div>
 
         </form>
     </div>
 
-    <iframe src="./bmi.php" frameborder="0" name="bmiMain">
-
+    <iframe src="./bmi.html" frameborder="0" name="bmiMain">
     </iframe>
 
 </body>

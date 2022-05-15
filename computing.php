@@ -15,7 +15,6 @@
             /* color: #363737; */
             color: whitesmoke;
         }
-
         div {
             font-size: 20px;
             text-align: center;
@@ -81,9 +80,9 @@
                 echo "BMI=" . $bmi2 . "<br>";
                 echo "重度肥胖";
             }
-            
+
         } else {
-            echo "請輸入身高體重";
+            echo "<span class='error'>請輸入身高體重</span>";
         }
 
         ?>
