@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            /* color: #363737; */
+            font-family: '微軟正黑體';
+            color: whitesmoke;
+        }
+
+        td {
+            padding: 5px 10px;
+        }
+
+        tr>th {
+            font-weight: bold;
+            text-decoration: underline;
+            text-decoration-color: whitesmoke;
+            text-underline-offset: 10px;
+            font-size: 20px;
+            padding: 5px 5px 10px;
+        }
+
+        .num {
+            padding-left: 15px;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>
+                成人肥胖定義
+            </th>
+            <th>
+                身體質量指數(BMI)
+            </th>
+        </tr>
+        <tr>
+            <td>體重過輕</td>
+            <td class="num">BMI < 18.4</td>
+        </tr>
+        <tr>
+            <td>健康體重</td>
+            <td class="num">18.5 ≦ BMI < 24 </td>
+        </tr>
+        <tr>
+            <td>過重</td>
+            <td class="num">24 ≦ BMI < 27 </td>
+        </tr>
+        <tr>
+            <td>輕度肥胖</td>
+            <td class="num">27 ≦ BMI < 30 </td>
+        </tr>
+        <tr>
+            <td>中度肥胖</td>
+            <td class="num">30 ≦ BMI < 35 </td>
+        </tr>
+        <tr>
+            <td>重度肥胖</td>
+            <td class="num">BMI ≧ 35 </td>
+        </tr>
+    </table>
+
+</body>
+
+</html>

@@ -1,83 +1,128 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./img/icon.png" type="image/x-icon">
     <title>BMI計算機</title>
     <style>
-        *{
+        * {
             box-sizing: border-box;
             margin: 0;
             padding: 0;
+            font-family: '微軟正黑體';
         }
-        body{
+
+        body {
             text-align: center;
             margin: 1%;
-            background-image: url(./img/flower-gef4cc0b5b_1920.jpg);
+            /* background-image: url(./img/flower-gef4cc0b5b_1920.jpg); */
+            background-image: url(./img/woman-g9cc946524_1920.jpg);
             background-size: cover;
+            background-attachment: fixed;
             background-position: center;
         }
-        h1{
+
+        h1 {
             margin: 1% 0;
         }
 
-        .main{
-            border: 2px solid lightgrey;
-            width: max-content;
+        .main {
+            width: 350px;
             margin: 0 auto;
-            padding: 2% 4%;
-            background-color: gainsboro;
-            border-radius: 2%;
-        }
-
-        .form{
             padding: 2% 0;
+            background-color: #A3D1D1;
+            border-radius: 5px;
         }
 
-        .button{
-            padding-top: 3%;
-            text-align: right;
+        table{
+            width: 100%;
+            padding: 10px;
         }
 
-        iframe{
-            border: 2px solid skyblue;
-            width: fit-content;
+        td{
+            font-size: 18px;
+            padding: 2px 0;
+        }
+
+        #heightN,
+        #weightN{
+            width: 90%;
+            padding: 0 3px;
+            border: none;
+            height: 20px;
+        }
+
+        #heightL,
+        #weightL{
+            height: 20px;
+        }
+
+        .button {
+            margin-top: 5%;
+            
+        }
+
+        .start{
+            font-size: 20px;
+            border: none;
+            background-color: #3D7878;
+            color: whitesmoke;
+            width: 80%;
+            height: 35px;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+
+        iframe {
+            width: 350px;
+            height: 300px;
             margin: 2%;
-            padding: 1%;
-            background-color: lightblue;
-            border-radius: 2%;
+            backdrop-filter: brightness(50%);
         }
-
-
-
-
 
     </style>
+
 </head>
+
 <body>
-    <h1>BMI計算</h1>
+    <h1>BMI計算機</h1>
 
     <div class="main">
+
         <form action="computing.php" method="get" target="bmiMain">
-            <div class="form">
-                <label for="">身高(cm):</label>
-                <input type="number" name="height" id="">
+            <table>
+                <tr>
+                    <td>
+                        <label for="heightN" id="heightL">身高(cm):</label>
+                    </td>
+                    <td>
+                        <input type="number" name="height" id="heightN">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="weightN" id="weightL">體重(kg): </label>
+                    </td>
+                    <td>
+                        <input type="number" name="weight" id="weightN">
+                    </td>
+                </tr>
+            </table>
+
+            <div class="button">
+                <input type='submit' value='開始計算' class="start">
             </div>
-    
-            <div class="form">
-                <label for="">體重(kg): </label>
-                <input type="number" name="weight" id="">
-            </div>
-            <div class="box button">
-               <input type='submit' value='開始計算'> 
-            </div>
+
         </form>
     </div>
 
-    <iframe src="" frameborder="0" name="bmiMain">
+    <iframe src="./bmi.php" frameborder="0" name="bmiMain">
 
     </iframe>
-    
+
 </body>
+
 </html>
